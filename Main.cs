@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using UrlShortener.Apis;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace UrlShortener
 {
@@ -113,27 +114,25 @@ namespace UrlShortener
         //Need to fix this. I don't know where it is being saved
         private void SaveFileBtn_Click(object sender, EventArgs e)
         {
+            var spaht = "file.txt";
+            //using (TextWriter tw = new StreamWriter("urls-" + DateTime.Now.ToString("yyMMdd_HHmmss")))
             try
             {
-                using (TextWriter tw = new StreamWriter("urls-" + DateTime.Now.ToString("yyMMdd_HHmmss")))
-                {
-                    foreach (var elem in urlListBox.Text)
-                        tw.WriteLine(elem);
-                    tw.Close();
-                }
+                var saveFile = new StreamWriter(spaht);
+                foreach (var item in urlListBox.Items)
+                    saveFile.WriteLine(item.ToString());
+                saveFile.Close();
             }
             catch (Exception ex)
             {
-                new Exception("Error. The list is empty.", ex);
+                new Exception("Error. Somethig went wrong. \n{0}", ex);
             }
         }
 
-        #endregion
-
         private void ClearListBtn_Click(object sender, EventArgs e)
         {
-            foreach (var elem in urlListBox.Text)
-                urlListBox.Text.Remove(elem);
+            urlListBox.Items.Clear();
         }
+        #endregion
     }
 }
