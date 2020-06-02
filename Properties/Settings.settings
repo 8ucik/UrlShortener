@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UrlShortener.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="bitlyToken" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bf5a3b1229e7b9f99ceec0897667dc9503845dcb</Value>
+    </Setting>
+    <Setting Name="bitlyTokenUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://api-ssl.bitly.com/v3/shorten?access_token={0}&amp;longUrl={1}</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

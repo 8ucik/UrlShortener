@@ -1,0 +1,14 @@
+C:\Users\Bucio\source\repos\UrlShortener\bin\Debug\UrlShortener.exe.config
+C:\Users\Bucio\source\repos\UrlShortener\bin\Debug\UrlShortener.exe
+C:\Users\Bucio\source\repos\UrlShortener\bin\Debug\UrlShortener.pdb
+C:\Users\Bucio\source\repos\UrlShortener\obj\Debug\UrlShortener.csprojAssemblyReference.cache
+C:\Users\Bucio\source\repos\UrlShortener\obj\Debug\UrlShortener.Properties.Resources.resources
+C:\Users\Bucio\source\repos\UrlShortener\obj\Debug\UrlShortener.csproj.GenerateResource.cache
+C:\Users\Bucio\source\repos\UrlShortener\obj\Debug\UrlShortener.csproj.CoreCompileInputs.cache
+C:\Users\Bucio\source\repos\UrlShortener\obj\Debug\UrlShortener.exe
+C:\Users\Bucio\source\repos\UrlShortener\obj\Debug\UrlShortener.pdb
+C:\Users\Bucio\source\repos\UrlShortener\obj\Debug\UrlShortener.Main.resources
+C:\Users\Bucio\source\repos\UrlShortener\bin\Debug\BitlyAPI.dll
+C:\Users\Bucio\source\repos\UrlShortener\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bucio\source\repos\UrlShortener\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bucio\source\repos\UrlShortener\obj\Debug\UrlShortener.csproj.CopyComplete
