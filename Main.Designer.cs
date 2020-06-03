@@ -107,6 +107,7 @@
             this.urlBox.Name = "urlBox";
             this.urlBox.Size = new System.Drawing.Size(275, 22);
             this.urlBox.TabIndex = 10;
+            this.urlBox.Text = "https://";
             // 
             // outputLbl
             // 
@@ -210,11 +211,13 @@
             // 
             // urlBox2
             // 
+            this.urlBox2.ForeColor = System.Drawing.Color.Black;
             this.urlBox2.Location = new System.Drawing.Point(72, 4);
             this.urlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.urlBox2.Name = "urlBox2";
             this.urlBox2.Size = new System.Drawing.Size(275, 22);
             this.urlBox2.TabIndex = 12;
+            this.urlBox2.Text = "https://";
             // 
             // urlLbl2
             // 
