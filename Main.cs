@@ -10,6 +10,7 @@ using Newtonsoft.Json.Linq;
 using UrlShortener.Apis;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Security.Policy;
 
 namespace UrlShortener
 {
@@ -49,7 +50,7 @@ namespace UrlShortener
             var tinyShrink = new TinuUrlApi();
             if (String.IsNullOrEmpty(urlBox.Text))
                 outputBox.Text = "No URL pasted.";
-            else if (urlBox.Text.Contains("http://") || (urlBox.Text.Contains("https://")))
+            else if (urlBox.Text.Contains("http://") || (urlBox.Text.Contains("https://"))) 
             {
                 Thread.Sleep(100);
                 outputBox.Text = tinyShrink.ShrinkTinyUrl(urlBox.Text);
@@ -111,21 +112,21 @@ namespace UrlShortener
             Clipboard.Clear();
         }
 
-        //Need to fix this. I don't know where it is being saved
         private void SaveFileBtn_Click(object sender, EventArgs e)
         {
-            var spaht = "file.txt";
-            //using (TextWriter tw = new StreamWriter("urls-" + DateTime.Now.ToString("yyMMdd_HHmmss")))
-            try
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = "list_of_urls-" + DateTime.Now.ToString("yyMMdd_HHmmss");
+            saveFileDialog.DefaultExt = "txt";
+            saveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog.Title = "Save file dialog";
+            saveFileDialog.FilterIndex = 1;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var saveFile = new StreamWriter(spaht);
+                var streamWriter = new StreamWriter(saveFileDialog.FileName);
                 foreach (var item in urlListBox.Items)
-                    saveFile.WriteLine(item.ToString());
-                saveFile.Close();
-            }
-            catch (Exception ex)
-            {
-                new Exception("Error. Somethig went wrong. \n{0}", ex);
+                    streamWriter.WriteLine(item.ToString());
+                streamWriter.Close();
+                MessageBox.Show("File has been saved!", this.Text);
             }
         }
 
